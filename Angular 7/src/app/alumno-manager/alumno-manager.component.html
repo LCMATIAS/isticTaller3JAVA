@@ -1,0 +1,12 @@
+<app-filter-box
+  (filtrar)="filtrarAlumnos($event)"
+></app-filter-box>
+<app-alumno-list
+  [alumnos]="alumnos"
+  (seleccionar)="seleccionarAlumno($event)"
+></app-alumno-list>
+<app-alumno-edit
+  *ngIf="alumnoSeleccionado"
+  [alumno] = "alumnoSeleccionado"
+>
+</app-alumno-edit>

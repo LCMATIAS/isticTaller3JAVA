@@ -1,0 +1,58 @@
+<mat-card>
+  <form #f="ngForm" (ngSubmit)="guardar(f.value, f.valid)">
+    Nombre:<br>
+    <input
+      type="text"
+      name="nombre"
+      [ngModel]="alumno.nombre"
+      required
+      #nombre="ngModel"
+    >
+    <span *ngIf="nombre.invalid" class="error-red">
+      El nombre es obligatorio
+    </span>
+    <span *ngIf="nombre.dirty"> Modificado!!!!</span>
+
+    <br><br>
+    Apellido:<br>
+    <input
+      type="text"
+      name="apellido"
+      [ngModel]="alumno.apellido"
+      required
+    >
+    <br><br>
+
+    <div class="radio" *ngFor="let s of sexos" >
+      <label>
+        <input type="radio"
+            name="sexo.sexo.id"
+            [value]= "s.id"
+            [ngModel]="alumno.sexo.id">
+        {{s.descripcion}}
+      </label>
+    </div>
+    <br><Br>
+    <label for="perfilID">Perfil</label><br>
+    <select name="perfilID"
+            placeholder="perfil"
+            [ngModel]="alumno.perfil.id">
+        <option *ngFor="let p of perfiles"
+                [value]="p.id">{{p.descripcion}}
+        </option>
+    </select>
+
+    <br><br>
+    <label><br>
+      <input  type="checkbox"
+              name="activo"
+              [ngModel]="alumno.activo">
+      Activo
+    </label>
+
+  </form>
+
+  <br>
+  <br>
+  {{ alumno | json }}
+</mat-card>

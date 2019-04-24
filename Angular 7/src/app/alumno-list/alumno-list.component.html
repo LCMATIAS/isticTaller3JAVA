@@ -1,0 +1,8 @@
+<mat-card>
+  <app-alumno-item
+    *ngFor="let alumno of alumnos"
+    [alumno]="alumno"
+    [seleccionado]="alumno === alumnoSeleccionado"
+    (seleccionar)="seleccionarAlumno($event)"
+  ></app-alumno-item>
+</mat-card>

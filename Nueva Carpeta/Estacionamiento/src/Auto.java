@@ -20,7 +20,7 @@ public class Auto {
     
     public Auto(String patente){
              this.patente = patente;
-             this.fechaIngreso = getDate;
+             //this.fechaIngreso = getDate;
     }
             
   

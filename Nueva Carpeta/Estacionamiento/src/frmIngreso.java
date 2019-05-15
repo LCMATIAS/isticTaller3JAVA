@@ -74,8 +74,8 @@ public class frmIngreso extends javax.swing.JFrame {
 
     private void btninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninActionPerformed
         // TODO add your handling code here:
-          Auto AutoEntrante = new Auto (this.txtPatente.getText());
-          Garage.IngresarAuto(AutoEntrante);
+         // Auto AutoEntrante = new Auto (this.txtPatente.getText());
+         // Garage.IngresarAuto(AutoEntrante);
           
     }//GEN-LAST:event_btninActionPerformed
 
